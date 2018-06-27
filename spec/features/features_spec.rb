@@ -11,3 +11,11 @@ feature 'display wordsmith information' do
     expect(page).to have_content('Kees: 60MP (morale points)')
   end
 end
+
+feature 'attacking' do
+  scenario 'shows confirmation after attack' do
+    sign_in_and_play
+    click_button 'Sling an insult'
+    expect(page).to have_content('Insult delivered!')
+  end
+end

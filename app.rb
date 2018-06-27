@@ -19,5 +19,9 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
+  get '/insulted' do
+    erb(:insulted)
+  end
+
   run! if app_file == $PROGRAM_NAME
 end
