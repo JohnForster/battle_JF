@@ -7,3 +7,13 @@ feature 'players can enter their names' do
     expect(page).to have_content('John vs. Kees!!!')
   end
 end
+
+feature 'display wordsmith information' do
+  scenario 'shows player 2 hitpoints' do
+    visit('/')
+    fill_in :player1, with: 'John'
+    fill_in :player2, with: 'Kees'
+    click_button :Submit
+    expect(page).to have_content('Kees: 60MP (morale points)')
+  end
+end
