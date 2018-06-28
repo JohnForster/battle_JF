@@ -4,5 +4,11 @@ class Player
 
   def initialize(name)
     @name = name
+    @morale = 60
   end
+
+  def reduce
+    @morale -= 10
+  end
+
 end

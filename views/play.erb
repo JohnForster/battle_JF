@@ -1,6 +1,6 @@
 <center>
-  <h1><%=@player1%> vs. <%=@player2%>!!!</h1>
-  <h2><%=@player2%>: 60MP (morale points)</h2>
+  <h1><%=@player1.name%> vs. <%=@player2.name%>!!!</h1>
+  <h2><%=@player2.name%>: <%=@player2.morale%>MP (morale points)</h2>
   <form action='/insulted'>
     <input type=submit value='Sling an insult'>
   </form>
