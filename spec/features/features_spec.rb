@@ -19,3 +19,12 @@ feature 'attacking' do
     expect(page).to have_content('Insult delivered!')
   end
 end
+
+feature 'reduction of morale points after insult' do
+  scenario 'it reduces morale when a player is attacked' do
+    sign_in_and_play
+    expect(page).to have_content('Kees: 60MP (morale points)')
+    click_button('Sling an insult')
+    expect(page).to have_content('Kees: 50MP (morale points)')
+  end
+end
