@@ -7,8 +7,11 @@ class Player
     @morale = 60
   end
 
-  def reduce
+  def feel_hurt
     @morale -= 10
   end
 
+  def insult(player)
+    player.feel_hurt
+  end
 end

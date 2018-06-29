@@ -21,8 +21,9 @@ class Battle < Sinatra::Base
   end
 
   get '/insulted' do
+    @player1 = $player1
     @player2 = $player2
-    @player2.reduce
+    @player1.insult(@player2)
     erb(:insulted)
   end
 
