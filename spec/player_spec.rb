@@ -14,11 +14,4 @@ describe Player do
       expect { bob.feel_hurt }.to change { bob.morale }.by(-10)
     end
   end
-
-  describe '#insult' do
-    it 'makes the target feel hurt' do
-      expect(player2).to receive(:feel_hurt)
-      bob.insult(player2)
-    end
-  end
 end

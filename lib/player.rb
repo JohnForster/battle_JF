@@ -10,8 +10,4 @@ class Player
   def feel_hurt
     @morale -= 10
   end
-
-  def insult(player)
-    player.feel_hurt
-  end
 end
